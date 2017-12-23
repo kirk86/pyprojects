@@ -1,0 +1,17 @@
+digraph G {
+labelloc="t";
+label="MyMLPError";
+node [shape = oval]; 
+n1[label="output (1)\nmodule = nn.Linear(10 -> 1)\lreverseMap = {}" tooltip="[[string \"-- We need to set debug flag to true...\"]]:12_"];
+n2[label="Node2\ninput = {}\lreverseMap = {}" tooltip="[[C]]:-1_"];
+n3[label="h2 (3)\nmodule = nn.Sigmoid\lreverseMap = {}" tooltip="[[string \"-- We need to set debug flag to true...\"]]:11_"];
+n4[label="h1 (4)\ninput = {Tensor[15]}\lmodule = nn.Linear(20 -> 10)\lreverseMap = {}" tooltip="[[string \"-- We need to set debug flag to true...\"]]:10_"];
+n5[label="input (5)\ninput = {Tensor[15]}\lmodule = nn.Identity\lreverseMap = {}" tooltip="[[string \"-- We need to set debug flag to true...\"]]:6_"];
+n6[label="Node6\ninput = {Tensor[15]}\lreverseMap = {}" tooltip="[[C]]:-1_"];
+n1 -> n2;
+n3 -> n1;
+n4 -> n3;
+n5 -> n4;
+n6 -> n5;
+n4[style=filled, fillcolor=red];
+}
