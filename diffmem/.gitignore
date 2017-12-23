@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+out*
+log
+*.pkl
+!copy.pkl
+!repeat_copy.pkl
+!priority_sort.pkl
+!ngrams.pkl
+!associative_recall.pkl
